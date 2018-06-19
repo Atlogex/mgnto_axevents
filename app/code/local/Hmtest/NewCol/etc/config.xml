@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Hm_Test_NewCol>
+            <version>1.0.0</version>
+        </Hm_Test_NewCol>
+    </modules>
+
+
+    <global>
+        <models>
+            <newcol>
+                <class>Hm_Test_NewCol_Model</class>
+                <resourceModel>newcol_resource</resourceModel>
+            </newcol>
+            <newcol_resource>
+                <class>Hm_Test_NewCol_Resource</class>
+                <entities>
+                    <column>
+                        <table>ax_newcol</table>
+                    </column>
+                </entities>
+            </newcol_resource>
+        </models>
+    </global>
+
+    <frontnd>
+
+    </frontnd>
+
+    <admin>
+
+    </admin>
+</config>

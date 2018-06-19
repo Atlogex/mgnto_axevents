@@ -33,6 +33,15 @@
 /LICENSE_AFL.txt
 
 # My variant
+!/app/code/
+/app/code/*
+
 !/app/code/local/
 /app/code/local/Atlogex/
-!/app/etc/modules/Hm_Test_AxEvents.xml
+
+# todo need find best ignore rule
+!/app/etc/
+/app/etc/*
+!/app/etc/modules/
+/app/etc/modules/*
+!/app/etc/modules/Hmtest_Axevents.xml

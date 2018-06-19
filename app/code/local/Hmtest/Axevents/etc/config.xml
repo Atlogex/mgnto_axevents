@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Совместим три последних задания в один общий модуль - События/Мероприятия нашего магазина
+ */
+-->
+<config>
+    <modules>
+        <Hmtest_Axevents>
+            <version>1.0.0</version>
+        </Hmtest_Axevents>
+    </modules>
+
+    <global>
+        <models>
+            <axevents>
+                <class>Hmtest_Axevents_Model</class>
+                <resourceModel>axevents_resource</resourceModel>
+            </axevents>
+            <axevents_resource>
+                <class>Hmtest_Axevents_Resource</class>
+                <entities>
+                    <axevent>
+                        <table>ax_events</table>
+                    </axevent>
+                </entities>
+            </axevents_resource>
+        </models>
+
+        <resources>
+            <axevents_setup>
+                <setup>
+                    <module>Hmtest_Axevents</module>
+                </setup>
+            </axevents_setup>
+        </resources>
+    </global>
+
+
+    <frontnd>
+
+    </frontnd>
+
+    <admin>
+
+    </admin>
+</config>

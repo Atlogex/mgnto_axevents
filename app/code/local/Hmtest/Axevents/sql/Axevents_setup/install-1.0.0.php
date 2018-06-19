@@ -1,14 +1,17 @@
 <?php
 /** @var Mage_Core_Model_Resource_Setup $installer */
 
-die('dbrec');
 
 $installer = $this;
+
 $installer->startSetup();
+
+// Закомментированный код ниже работоспособен, но стандарт, скорее всего,
+// предполгает использование конструктора с поэтапным построением таблицы.
 
 /*
 $installer->run("
-    CREATE TABLE IF NOT EXISTS `{$installer->getTable('AxEvents/events')}` ( 
+    CREATE TABLE IF NOT EXISTS `{$installer->getTable('axevents/axevent')}` (
       `event_id` INT UNSIGNED NOT NULL AUTO_INCREMENT , 
       `title` VARCHAR(255) NOT NULL , 
       `description` TEXT NOT NULL , 
@@ -17,8 +20,9 @@ $installer->run("
       PRIMARY KEY (`event_id`)) ENGINE = InnoDB;
 ");
 */
+
 $table = $installer->getConnection()
-    ->newTable($installer->getTable('AxEvents/axevents'))
+    ->newTable($installer->getTable('axevents/axevent'))
     ->addColumn('event_id', Varien_Db_Ddl_Table::TYPE_INTEGER, null, array(
         'identity'  => true,
         'unsigned'  => true,
@@ -29,7 +33,7 @@ $table = $installer->getConnection()
     ->addColumn('description', Varien_Db_Ddl_Table::TYPE_TEXT, 1000, array())
     ->addColumn('image', Varien_Db_Ddl_Table::TYPE_VARCHAR, 255, array())
 
-    ->addIndex($installer->getIdxName('AxEvents/events', 'event_id'), 'event_id');
+    ->addIndex($installer->getIdxName('axevents/axevent', 'event_id'), 'event_id');
 
 $installer->getConnection()->createTable($table);
 

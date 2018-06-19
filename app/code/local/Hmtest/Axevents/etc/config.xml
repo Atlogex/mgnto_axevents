@@ -25,6 +25,12 @@
                     </axevent>
                 </entities>
             </axevents_resource>
+
+            <helpers>
+                <axevents>
+                    <class>Hmtest_Axevents_Helper</class>
+                </axevents>
+            </helpers>
         </models>
 
         <resources>
@@ -37,11 +43,27 @@
     </global>
 
 
-    <frontnd>
-
-    </frontnd>
+    <frontend>
+        <routers>
+            <axevents>
+                <use>standard</use>
+                <args>
+                    <module>Hmtest_Axevents</module>
+                    <frontName>axevents</frontName>
+                </args>
+            </axevents>
+        </routers>
+    </frontend>
 
     <admin>
-
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <axevents before="Mage_Adminhtml">Hmtest_Axevents_Adminhtml</axevents>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
     </admin>
 </config>

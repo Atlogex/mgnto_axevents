@@ -1,0 +1,14 @@
+<?php if (count($this->getEvents()) > 0): ?>
+    <h2 class="axevents-slider-heading">Our events</h2>
+    <div class="axevents-slider-wrapper m__ae_slider">
+        <?php foreach ($this->getEvents() as $event): ?>
+            <?php $src = ($event->getImage()) ? $event->getImage() : $this->imageDefault; ?>
+            <div class="axevents-list m__aes_unit">
+                <img class="block-image-slide" src="/media/<?php echo $src ?>" alt="">
+                <div class="block-title-slide"><?php echo $event->getTitle() ?></div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+<?php endif; ?>
+
+

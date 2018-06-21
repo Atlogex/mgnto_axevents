@@ -32,6 +32,7 @@ $table = $installer->getConnection()
     ->addColumn('title', Varien_Db_Ddl_Table::TYPE_VARCHAR, 255, array())
     ->addColumn('description', Varien_Db_Ddl_Table::TYPE_TEXT, 1000, array())
     ->addColumn('image', Varien_Db_Ddl_Table::TYPE_VARCHAR, 255, array())
+    ->addColumn('status', Varien_Db_Ddl_Table::TYPE_TINYINT, 1, array())
 
     ->addIndex($installer->getIdxName('axevents/axevent', 'event_id'), 'event_id');
 

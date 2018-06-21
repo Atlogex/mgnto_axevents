@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <axevents translate="title" module="axevents">
+                                        <title>AxEvents</title>
+                                    </axevents>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                    <cms>
+                        <children>
+                            <axevents translate="title" module="axevents">
+                                <title>Events</title>
+                            </axevents>
+                        </children>
+                    </cms>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+
+    <menu>
+        <cms>
+            <children>
+                <axevents translate="title" module="axevents">
+                    <title>Events</title>
+                    <action>adminhtml/axevents</action>
+                    <sort_order>0</sort_order>
+                </axevents>
+            </children>
+        </cms>
+    </menu>
+</config>

@@ -12,26 +12,33 @@
     </modules>
 
     <global>
+
+        <blocks>
+            <axevents>
+                <class>Hmtest_Axevents_Block</class>
+            </axevents>
+        </blocks>
+
         <models>
             <axevents>
                 <class>Hmtest_Axevents_Model</class>
                 <resourceModel>axevents_resource</resourceModel>
             </axevents>
             <axevents_resource>
-                <class>Hmtest_Axevents_Resource</class>
+                <class>Hmtest_Axevents_Model_Resource</class>
                 <entities>
                     <axevent>
                         <table>ax_events</table>
                     </axevent>
                 </entities>
             </axevents_resource>
-
-            <helpers>
-                <axevents>
-                    <class>Hmtest_Axevents_Helper</class>
-                </axevents>
-            </helpers>
         </models>
+
+        <helpers>
+            <axevents>
+                <class>Hmtest_Axevents_Helper</class>
+            </axevents>
+        </helpers>
 
         <resources>
             <axevents_setup>
@@ -53,6 +60,14 @@
                 </args>
             </axevents>
         </routers>
+
+        <layout>
+            <updates>
+                <axevents module="axevents">
+                    <file>axevents.xml</file>
+                </axevents>
+            </updates>
+        </layout>
     </frontend>
 
     <admin>
@@ -66,4 +81,14 @@
             </adminhtml>
         </routers>
     </admin>
+
+    <defalut>
+        <axevents>
+            <settings>
+                <enabled>1</enabled>
+                <events_count>10</events_count>
+            </settings>
+        </axevents>
+    </defalut>
+
 </config>

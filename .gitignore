@@ -8,11 +8,11 @@
 /downloader/
 /errors/
 /includes/
-/js/
+/js/*
 /lib/
 /media/
 /shell/
-/skin/
+/skin/*
 /var/
 
 /favicon.ico
@@ -39,9 +39,52 @@
 !/app/code/local/
 /app/code/local/Atlogex/
 
-# todo need find best ignore rule
+#todo need find best ignore rule
 !/app/etc/
 /app/etc/*
 !/app/etc/modules/
 /app/etc/modules/*
 !/app/etc/modules/Hmtest_Axevents.xml
+
+#
+/app/code/local/Hmtest/NewCol/
+
+# js
+!/js/axevents/
+!/js/axevents/*
+
+# css
+!/skin/frontend/
+/skin/frontend/*
+!/skin/frontend/base/
+/skin/frontend/base/*
+!/skin/frontend/base/default/
+/skin/frontend/base/default/*
+!/skin/frontend/base/default/css/
+/skin/frontend/base/default/css/*
+!/skin/frontend/base/default/css/axevents.css
+
+# language
+!/app/locale/
+/app/locale/*
+!/app/locale/en_US/
+/app/locale/en_US/*
+!/app/locale/en_US/Hmtest_Axevents.csv
+
+#frontend
+!/app/design/
+/app/design/*
+!/app/design/frontend/
+/app/design/frontend/*
+!/app/design/frontend/base/
+/app/design/frontend/base/*
+!/app/design/frontend/base/default/
+/app/design/frontend/base/default/*
+!/app/design/frontend/base/default/template/
+/app/design/frontend/base/default/template/*
+!/app/design/frontend/base/default/template/axevents/
+
+
+!/app/design/frontend/base/default/layout/
+/app/design/frontend/base/default/layout/*
+!/app/design/frontend/base/default/layout/axevents.xml

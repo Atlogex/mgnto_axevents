@@ -1,0 +1,8 @@
+<?php foreach ($this->getEvents() as $event): ?>
+    <?php $src = ($event->getImage()) ? $event->getImage() : $this->imageDefault; ?>
+    <div class="axevents-list">
+        <img class="block-image" src="/media/<?php echo $src ?>" alt="">
+        <div class="block-title"><?php echo $event->getTitle() ?></div>
+        <div class="block-content"><?php echo $event->getDescription() ?></div>
+    </div>
+<?php endforeach; ?>

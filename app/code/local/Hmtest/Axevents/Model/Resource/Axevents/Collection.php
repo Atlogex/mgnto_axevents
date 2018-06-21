@@ -1,11 +1,11 @@
 <?php
 
-class Hmtest_Axevents_Model_Resource_AxEvents_Collection extends Mage_Core_Model_Mysql4_Abstract
+class Hmtest_Axevents_Model_Resource_Axevents_Collection extends Mage_Core_Model_Mysql4_Collection_Abstract
 {
 
     public function _construct()
     {
         parent::_construct();
-        $this->_init('AxEvents/events', 'event_id');
+        $this->_init('axevents/axevents');
     }
 }

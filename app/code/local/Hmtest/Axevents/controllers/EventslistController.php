@@ -8,9 +8,4 @@ class Hmtest_Axevents_EventslistController extends Mage_Core_Controller_Front_Ac
         $this->loadLayout();
         $this->renderLayout();
     }
-
-    public function showEventsStats()
-    {
-
-    }
 }

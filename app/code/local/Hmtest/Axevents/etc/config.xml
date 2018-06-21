@@ -82,6 +82,16 @@
         </routers>
     </admin>
 
+    <adminhtml>
+        <layout>
+            <updates>
+                <axevents module="axevents">
+                    <file>axevents.xml</file>
+                </axevents>
+            </updates>
+        </layout>
+    </adminhtml>
+
     <defalut>
         <axevents>
             <settings>

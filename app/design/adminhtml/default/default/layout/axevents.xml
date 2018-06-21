@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<layout version="1.0.0">
+    <adminhtml_axevents_edit>
+        <update handle="editor"/>
+    </adminhtml_axevents_edit>
+</layout>
